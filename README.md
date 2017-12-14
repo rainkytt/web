@@ -1,3 +1,2 @@
 # web
-Anna PHP aine
-# programmeerimisvahendid
+# programmeerimisvahendite kasutamine
