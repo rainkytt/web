@@ -78,3 +78,31 @@ function valjastaMassiiv($massiiv){
 valjastaMassiiv($testMassiiv);
 echo '<hr />';
 
+/*
+ * 3.
+ * Loo funktsioon nimega vahetaMinMax, mis võtab
+ * parameetrina täisarvude massiivi (testimises
+ * võib kasutada looMassiiv funktsiooniga
+ * genereeritud massiiv)
+ * ja leiab kõige väiksema ja kõige suurema
+ * elemendi antud massiivis ning vahetab nende asukohad.
+ *
+ * Kontrolli kas kohad on vahetatud kasutades
+ * valjastaMassiiv funktsiooni
+*/
+function vahetaMinMax(&$massiiv){
+    $min = min($massiiv);
+    $max = max($massiiv);
+    echo 'Miinimum = '.$min.'<br />';
+    echo 'Maksimum = '.$max.'<br />';
+    for($i = 0; $i < count($massiiv); $i++){
+        if($massiiv[$i] == $min){
+            $massiiv[$i] = $max;
+        } else if($massiiv[$i] == $max) {
+            $massiiv[$i] = $min;
+        }
+        echo $massiiv[$i].'<br />';
+    }
+}
+vahetaMinMax($testMassiiv);
+valjastaMassiiv($testMassiiv);
