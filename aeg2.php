@@ -30,13 +30,18 @@ function kuu(){
 }
 
 function aasta(){
+    $hetkeAasta = date('Y', time());
     $valik = '<select name="aasta">';
     for($aasta = 1920; $aasta < 2040; $aasta++){
+        if($aasta == $hetkeAasta){
+            $valik = $valik.'<option value="'.$aasta.'" selected>'.$aasta.'</option>';
+        }
         $valik = $valik.'<option value="'.$aasta.'">'.$aasta.'</option>';
     }
     $valik = $valik.'</select>';
     return $valik;
 }
+
 
 function registreerimisVorm(){
     echo ' 
@@ -81,5 +86,9 @@ print_r(getdate());*/
 date_default_timezone_set('Europe/Tallinn');
 $hetkel = time();
     echo $hetkel.'<br />';
+
 $kell = date('H:i');
-echo $kell;
+echo $kell.'<br />';
+
+$aasta = date('Y', $hetkel);
+echo $aasta.'<br />';
