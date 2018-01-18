@@ -17,7 +17,7 @@ function vorm(){
     echo $serveriArv.'<br />';
     echo '<p>Juhuslik arv on vahemikus 1 kuni 20</p>';
     echo '
-    <form action="game.php" method="post">
+    <form action="'.$_SERVER['PHP_SELF'].'" method="post">
     <input type="hidden" name="serveriArv" value="'.$serveriArv.'">
     <input type="hidden" name="katseteArv" value="'.$katseteArv.'">
     <input type="text" name="kasutajaArv"><br />
