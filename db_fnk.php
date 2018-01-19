@@ -20,3 +20,16 @@ function yhendus(){
             return $yhendus;
         }
 }
+
+function saadaParing($yhendus, $sql){
+    $tulemus = mysqli_query($yhendus, $sql);
+    if (!$tulemus){
+        echo 'Probleem päringuga '.$sql.'<br />';
+        echo mysqli_error($yhendus).'<br />';
+        echo mysqli_errno($yhendus).'<br />';
+        return false;
+    } else {
+        echo 'Päring läks läbi<br />';
+        return true;
+    }
+}
