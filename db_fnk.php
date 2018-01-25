@@ -46,7 +46,7 @@ function annaAndmed($yhendus, $sql)
         }
     }
     if (count($andmed) == 0) {
-        return = false;
+        return false;
     } else {
 
     // tagastan andmetega täidetud massiivi
